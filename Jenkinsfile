@@ -1,5 +1,6 @@
 credIdIp = 'be2f44ab-6be1-4f5a-aa22-c4d7b69a7a93'
 credIdUser = 'dbfbcc84-49b1-42b5-8d43-ed03a88b1d62'
+light_id = 4
 
 pipeline {
 	agent any
@@ -34,6 +35,6 @@ pipeline {
 
 def notifyHueLight(body) {
 	withCredentials([string(credentialsId: credIdIp, variable: 'IP'), string(credentialsId: credIdUser, variable: 'USER')]) {
-		httpRequest httpMode: 'PUT', url: "http://${env:IP}/api/${env:USER}/lights/4/state", requestBody: "$body", consoleLogResponseBody: true
+		httpRequest httpMode: 'PUT', url: "http://$IP/api/$USER/lights/${light_id}/state", requestBody: "$body", consoleLogResponseBody: true
 	}
 }
