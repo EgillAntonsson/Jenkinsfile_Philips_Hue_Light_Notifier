@@ -34,5 +34,5 @@ pipeline {
 
 def notifyHueLight(body) {
 	withCredentials([string(credentialsId: credIdIp, variable: 'IP'), string(credentialsId: credIdUser, variable: 'USER')]) {
-		httpRequest httpMode: 'PUT', url: "http://$env:IP/api/$env:USER/lights/4/state", requestBody: "$body",  consoleLogResponseBody: true
+		httpRequest httpMode: 'PUT', url: "http://$env:IP/api/$env:USER/lights/4/state", requestBody: "$body", consoleLogResponseBody: true
 }
