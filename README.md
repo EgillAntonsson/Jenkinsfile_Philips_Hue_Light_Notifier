@@ -3,7 +3,7 @@
 See you build status change be notified via Philips Hue light!
 
 On build start the light turns Blue and blinks (for max 15 seconds),
-and then build result:
+and then on build result:
 * success -> light turns Green
 * failure -> light turns Red
 * unstable -> light turns Yellow
