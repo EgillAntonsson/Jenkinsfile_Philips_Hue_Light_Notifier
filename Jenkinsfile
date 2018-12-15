@@ -45,4 +45,5 @@ void notifyHueLight(body) {
 	withCredentials([string(credentialsId: CREDENTIALS_ID_IP, variable: 'IP'), string(credentialsId: CREDENTIALS_ID_USER, variable: 'USER')]) {
 		String jsonBody = JsonOutput.toJson(body)
 		httpRequest httpMode: 'PUT', url: "http://$IP/api/$USER/lights/$LIGHT_ID/state", requestBody: jsonBody
+	}
 }
