@@ -14,7 +14,7 @@ int hueBlue = 46920
 pipeline {
 	agent any
 	stages {
-		stage('notifying build start') {
+		stage('Notify build start') {
 			steps {
 				notifyHueLight([hue: hueBlue, sat: 254, bri: 254, alert: 'lselect', transitiontime: 1, on: true])
 			}
@@ -28,8 +28,7 @@ pipeline {
 	}
 	post {
 		success {
-			// notifyHueLight([hue: hueGreen, sat: 254, bri: 254, alert: 'none', transitiontime: 1, on: true])
-			notifyHueLight([hue: hueYellow, sat: 150, bri: 50, alert: 'none', transitiontime: 1, on: true])
+			notifyHueLight([hue: hueGreen, sat: 254, bri: 254, alert: 'none', transitiontime: 1, on: true])
 		}
 		failure {
 			notifyHueLight([hue: hueRed, sat: 254, bri: 254, alert: 'none', transitiontime: 1, on: true])
