@@ -1,10 +1,10 @@
 import groovy.transform.Field
 import groovy.json.JsonOutput
 
-@Field final int LIGHT_ID = 4
+LIGHT_ID = 4
 
-@Field final CREDENTIALS_ID_IP = 'be2f44ab-6be1-4f5a-aa22-c4d7b69a7a93'
-@Field final CREDENTIALS_ID_USER = 'dbfbcc84-49b1-42b5-8d43-ed03a88b1d62'
+CREDENTIALS_ID_IP = 'be2f44ab-6be1-4f5a-aa22-c4d7b69a7a93'
+CREDENTIALS_ID_USER = 'dbfbcc84-49b1-42b5-8d43-ed03a88b1d62'
 
 final int HUE_RED = 0
 final int HUE_YELLOW = 12750
@@ -44,6 +44,5 @@ pipeline {
 void notifyHueLight(body) {
 	withCredentials([string(credentialsId: CREDENTIALS_ID_IP, variable: 'IP'), string(credentialsId: CREDENTIALS_ID_USER, variable: 'USER')]) {
 		String jsonBody = JsonOutput.toJson(body)
-		httpRequest httpMode: 'PUT', url: "http://$IP/api/$USER/lights/$LIGHT_ID/state", requestBody: jsonBody, quiet: true
-	}
+		httpRequest httpMode: 'PUT', url: "http://$IP/api/$USER/lights/$LIGHT_ID/state", requestBody: jsonBody
 }
