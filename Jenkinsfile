@@ -41,7 +41,7 @@ pipeline {
 			notifyWithPhilipsHueLight([hue: HUE_YELLOW, sat: SAT_MAX, bri: BRI_MAX, alert: 'none', transitiontime: 1, on: true])
 		}
 		aborted {
-			// Less than max values in saturation and brightness affect the hue color, in this case resulting in a 'dimmed greyish' color.
+			// light turns 'greyish' because bri and sat values are reduced.
 			notifyWithPhilipsHueLight([hue: HUE_YELLOW, sat: 150, bri: 50, alert: 'none', transitiontime: 1, on: true])
 		}
 	}
