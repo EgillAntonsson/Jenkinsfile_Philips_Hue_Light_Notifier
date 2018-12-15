@@ -21,6 +21,7 @@ pipeline {
 	stages {
 		stage('Notify build start') {
 			steps {
+				// alert: 'lselect' makes the light blink for max 15 seconds.
 				notifyWithPhilipsHueLight([hue: HUE_BLUE, sat: SAT_MAX, bri: BRI_MAX, alert: 'lselect', transitiontime: 1, on: true])
 			}
 		}
@@ -41,7 +42,7 @@ pipeline {
 			notifyWithPhilipsHueLight([hue: HUE_YELLOW, sat: SAT_MAX, bri: BRI_MAX, alert: 'none', transitiontime: 1, on: true])
 		}
 		aborted {
-			// light turns 'greyish' because bri and sat values are reduced.
+			// light turns 'Greyish' because bri and sat values are reduced.
 			notifyWithPhilipsHueLight([hue: HUE_YELLOW, sat: 150, bri: 50, alert: 'none', transitiontime: 1, on: true])
 		}
 	}
