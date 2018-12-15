@@ -6,10 +6,10 @@ import groovy.json.JsonOutput
 @Field String credIdIp = 'be2f44ab-6be1-4f5a-aa22-c4d7b69a7a93'
 @Field String credIdUser = 'dbfbcc84-49b1-42b5-8d43-ed03a88b1d62'
 
-String hueRed = 0
-String hueYellow = 12750
-String hueGreen = 25717
-String hueBlue = 46920
+int hueRed = 0
+int hueYellow = 12750
+int hueGreen = 25717
+int hueBlue = 46920
 
 pipeline {
 	agent any
