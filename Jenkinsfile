@@ -21,8 +21,7 @@ pipeline {
 		}
 		stage('build') {
 			steps {
-				// Simulating build by sleeping for some seconds
-				powershell 'Start-Sleep -s 1'
+				sleep 1
 			}
 		}
 	}
