@@ -46,7 +46,7 @@ pipeline {
 			notifyWithPhilipsHueLight([xy: XY_RED, bri: BRI_MAX, alert: 'none', transitiontime: 1, on: true])
 		}
 		unstable {
-			notifyWithPhilipsHueLight([xy: XY_YELLOW bri: BRI_MAX, alert: 'none', transitiontime: 1, on: true])
+			notifyWithPhilipsHueLight([xy: XY_YELLOW, bri: BRI_MAX, alert: 'none', transitiontime: 1, on: true])
 		}
 		aborted {
 			// light turns dimmed white / grey.
