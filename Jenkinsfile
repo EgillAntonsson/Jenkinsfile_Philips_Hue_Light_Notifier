@@ -1,4 +1,3 @@
-import groovy.transform.Field
 import groovy.json.JsonOutput
 
 // Change the light id to the one you want to use.
