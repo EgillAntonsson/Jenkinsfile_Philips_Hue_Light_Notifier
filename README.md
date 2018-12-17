@@ -33,7 +33,7 @@ Here are the steps to get it working for you:
 
 Commit and push the changes to your VCS and build the Jenkins job for the code repo, and enjoy the light show!
 
-#! License
+## License
 
 This is the [license](LICENSE) for this code repo.
 
