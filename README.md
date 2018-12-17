@@ -32,3 +32,9 @@ Here are the steps to get it working for you:
 (NOTE: If you don't mind writing your IP address and username directly into the [Jenkinsfile](Jenkinsfile), you can skip 3. and remove the Credentials code and replace the $IP and $USER in the httpRequest url parameter in the [Jenkinsfile.](Jenkinsfile)
 
 Commit and push the changes to your VCS and build the Jenkins job for the code repo, and enjoy the light show!
+
+#! License
+
+This is the [license](LICENSE) for this code repo.
+
+"Hue Personal Wireless Lighting" is a trademark owned by Koninklijke Philips Electronics N.V., see www.meethue.com for more information. I am in no way affiliated with the Philips organization.
