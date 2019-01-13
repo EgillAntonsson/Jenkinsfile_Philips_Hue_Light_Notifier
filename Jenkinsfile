@@ -7,12 +7,6 @@ LIGHT_ID = 4
 CREDENTIALS_ID_IP = 'be2f44ab-6be1-4f5a-aa22-c4d7b69a7a93'
 CREDENTIALS_ID_USER = 'dbfbcc84-49b1-42b5-8d43-ed03a88b1d62'
 
-final int HUE_RED = 0
-final int HUE_GREEN = 25717
-final int HUE_BLUE = 46920
-final int HUE_YELLOW = 12750
-final int SAT_MAX = 254
-
 final def XY_RED = [0.692, 0.308]
 final def XY_GREEN = [0.17, 0.7]
 final def XY_BLUE = [0.153, 0.048]
