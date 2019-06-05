@@ -2,7 +2,6 @@ import groovy.json.JsonOutput
 
 // Change the light id to the one you want to use.
 LIGHT_ID = 4
-
 // Change to your Jenkins secret text credential IDs for your Hue Bridge IP address and username.
 CREDENTIALS_ID_IP = 'be2f44ab-6be1-4f5a-aa22-c4d7b69a7a93'
 CREDENTIALS_ID_USER = 'dbfbcc84-49b1-42b5-8d43-ed03a88b1d62'
